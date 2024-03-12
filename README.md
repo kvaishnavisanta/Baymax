@@ -127,4 +127,5 @@ This project presents a conversational chatbot with an intuitive graphical user 
 
 ## License:
 
-This project is licensed under the [MIT License](LICENSE).
+Working on the LICENSE...
+This project is licensed under the [MIT License](LICENSE). 
