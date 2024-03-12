@@ -1,5 +1,6 @@
-# BYMAX (conversational companion Chatbot) 
+# BAYMAX (conversational companion Chatbot) 
 
+![Flowchart](https://www.snexplores.org/wp-content/uploads/2023/03/1440_TF_Baymax_feat.jpg)
 
 This project presents a conversational chatbot with an intuitive graphical user interface (GUI) built using PyQt5. The chatbot engages users in dynamic and friendly conversations, leveraging the powerful OpenAI GPT-3.5 Turbo model for generating contextually relevant responses. Additionally, the application offers seamless conversation history management, allowing users to revisit and review past interactions.
 
