@@ -16,6 +16,18 @@ This project presents a conversational chatbot with an intuitive graphical user 
 - EllEvenlabs for STT
 - OpenAI Python library
 
+## Problem Statment 
+1. **Lack of Personalization**: The chatbot may struggle to provide personalized responses tailored to the user's preferences, leading to a generic and less engaging interaction.
+
+2. **Limited Context Understanding**: Understanding the context of conversations can be challenging for chatbots, leading to misunderstandings or irrelevant responses.
+
+3. **Emotional Intelligence**: Chatbots may lack emotional intelligence, making it difficult for them to understand and appropriately respond to the user's emotions, especially in sensitive situations.
+
+4. **Maintaining Engagement**: Keeping users engaged over time can be difficult, as chatbots may struggle to provide fresh and interesting content or maintain continuity in conversations.
+
+5. **Handling Complex Queries**: Chatbots may struggle to handle complex queries or tasks that require deep understanding or problem-solving skills beyond their programmed capabilities.
+
+
 ## Getting Started:
 
 ### SystemFlowchart 
