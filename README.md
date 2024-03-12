@@ -1,6 +1,6 @@
 # BAYMAX (conversational companion Chatbot) 
 
-![Flowchart](https://www.thebanner.org/sites/default/files/styles/article_detail_header/public/TIN-065%20Big%20Hero%206_large.jpg?itok=oU7VOyok)
+![Flowchart](https://cdn.discordapp.com/attachments/1078212576879587370/1216993647271346226/baymaxxx-removebg-preview.png?ex=660268a8&is=65eff3a8&hm=aec156705e720d50bb72a23f3355de4381f0a2a0761be1053bd0f5f450819e24&)
 
 This project presents a conversational chatbot with an intuitive graphical user interface (GUI) built using PyQt5. The chatbot engages users in dynamic and friendly conversations, leveraging the powerful OpenAI GPT-3.5 Turbo model for generating contextually relevant responses. Additionally, the application offers seamless conversation history management, allowing users to revisit and review past interactions.
 
