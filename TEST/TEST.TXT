@@ -1,5 +1,7 @@
 #testing software for python 
 
-Behave - Behavior-Driven Development (BDD): behave is a BDD framework that allows you to write tests in a natural language format (Gherkin syntax), making it easier to understand the behavior of your system from a business perspective.
+Behave - Behavior-Driven Development (BDD): behave is a BDD framework that allows you to write tests in a natural language format (Gherkin syntax),
+making it easier to understand the behavior of your system from a business perspective.
 
-Pytest - pytest is a testing framework primarily used for unit testing in Python. It allows you to write simple and scalable test cases to verify the correctness of individual components or functions within your chatbot.
+Pytest - pytest is a testing framework primarily used for unit testing in Python.
+It allows you to write simple and scalable test cases to verify the correctness of individual components or functions within your chatbot.
