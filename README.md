@@ -120,6 +120,12 @@ This project presents a conversational chatbot with an intuitive graphical user 
 
 - **New Dictionary for the Day:** A new dictionary is created for the current day.
 
+## New Feature to implement 
+
+Right swipe to reply just like Whatsapp
+
+![Flowchart](Project_Details/New_feature(right_swipe_to_reply).png)
+
 
 ## Credits:
 
