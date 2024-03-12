@@ -1,0 +1,21 @@
+Inappropriate Responses: Test the chatbot's responses to ensure it does not provide inappropriate or offensive content, 
+such as promoting self-harm or encouraging negative behavior.
+
+Gender Sensitivity: Verify that the chatbot respects users' gender identity and does not make 
+assumptions or reinforce stereotypes about gender roles.
+
+Safety Concerns: Ensure the chatbot is equipped to handle situations where users express thoughts
+of self-harm or harm to others, providing appropriate resources and support, such as helpline numbers or mental health resources.
+
+Privacy and Security: Test the chatbot's ability to handle sensitive information securely
+and responsibly, such as personal details shared by users, ensuring compliance with privacy regulations like GDPR or HIPAA.
+
+Cultural Sensitivity: Check for culturally insensitive responses or references that
+may offend or alienate users from different backgrounds or communities.
+
+
+Technical Failures: Test the chatbot's robustness against technical failures, 
+such as server crashes or loss of internet connection, ensuring users can seamlessly resume their conversations or access support when needed.
+
+User Experience: Evaluate the overall user experience to ensure the chatbot's interface is 
+intuitive and easy to navigate, facilitating meaningful interactions and engagement.
