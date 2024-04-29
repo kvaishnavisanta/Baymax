@@ -10,7 +10,7 @@ async def main() -> None:
     # Your menu system goes here
     while True:
         print("Menu:")
-        print("1. Start to talk with Hume")
+        print("1. Start to talk with Baymax")
         print("2. Choose personality")
         print("3. Create your own personality")
         choice = input("Enter your choice: ")
