@@ -2,7 +2,7 @@
 
 ![Flowchart](https://cdn.discordapp.com/attachments/1078212576879587370/1216993647271346226/baymaxxx-removebg-preview.png?ex=663135e8&is=662fe468&hm=b2a073f10ba5f89882569309a52e21e4d63833c70fc5030a23cae82b313458cb&)
 
-This project presents a conversational chatbot with an intuitive graphical user interface (GUI) built using PyQt5. The chatbot engages users in dynamic and friendly conversations, leveraging the powerful OpenAI GPT-3.5 Turbo model for generating contextually relevant responses. Additionally, the application offers seamless conversation history management, allowing users to revisit and review past interactions.
+This project presents a conversational chatbot with an intuitive graphical user interface (GUI) built using PyQt5. The chatbot engages users in dynamic and friendly conversations, leveraging the powerful Hume AI  for generating contextually relevant responses.
 
 ## Key Features:
 
