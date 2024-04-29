@@ -32,7 +32,7 @@ This project presents a conversational chatbot with an intuitive graphical user 
 
 ### SystemFlowchart 
 
-![Flowchart](Project_Details/Main_Flowchart.png)
+![Flowchart](Project_Details/hume-flowchart.jpg)
 
 
 
