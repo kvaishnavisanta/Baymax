@@ -1,0 +1,54 @@
+---------------success test--------------------
+
+test_choice_1 (__main__.TestMain) ... ok
+test_choice_2 (__main__.TestMain) ... ok
+test_choice_3 (__main__.TestMain) ... ok
+test_invalid_choice (__main__.TestMain) ... ok
+test_unexpected_choice (__main__.TestMain) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.500s
+
+Test results:
+Successful: 5
+Failures: 0
+Errors: 0
+Total duration: 0.500 seconds
+
+
+
+--------------failure test case--------------------
+
+.F.FF.
+======================================================================
+FAIL: test_empty_input (__main__.TestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_main.py", line XX, in test_empty_input
+    main()
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_choice (__main__.TestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_main.py", line XX, in test_invalid_choice
+    self.assertEqual(mock_stdout.getvalue().strip(), "Invalid choice. Please choose again.")
+AssertionError: '' != 'Invalid choice. Please choose again.'
+- Invalid choice. Please choose again.
++ 
+
+======================================================================
+FAIL: test_unexpected_choice (__main__.TestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_main.py", line XX, in test_unexpected_choice
+    self.assertEqual(mock_stdout.getvalue().strip(), "Unexpected choice. Please choose again.")
+AssertionError: '' != 'Unexpected choice. Please choose again.'
+- Unexpected choice. Please choose again.
++ 
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.501s
+
+FAILED (failures=3)
