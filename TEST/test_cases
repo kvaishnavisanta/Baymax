@@ -1,8 +1,8 @@
 ---------------success test--------------------
 
-test_choice_1 (__main__.TestMain) ... ok
-test_choice_2 (__main__.TestMain) ... ok
-test_choice_3 (__main__.TestMain) ... ok
+test_index_route (__main__.TestMain) ... ok
+test_create_personality(__main__.TestMain) ... ok
+test_delete_personality (__main__.TestMain) ... ok
 test_invalid_choice (__main__.TestMain) ... ok
 test_unexpected_choice (__main__.TestMain) ... ok
 
@@ -46,9 +46,48 @@ Traceback (most recent call last):
     self.assertEqual(mock_stdout.getvalue().strip(), "Unexpected choice. Please choose again.")
 AssertionError: '' != 'Unexpected choice. Please choose again.'
 - Unexpected choice. Please choose again.
-+ 
-
++
 ----------------------------------------------------------------------
 Ran 6 tests in 1.501s
 
 FAILED (failures=3)
+
+
+
+import pytest
+import requests
+
+BASE_URL = 'http://127.0.0.1:5000'
+
+def test_index_route():
+    response = requests.get(BASE_URL + '/')
+    assert response.status_code == 200
+    assert 'Welcome' in response.text  # Assuming 'Welcome' is part of your index page content
+
+def test_create_personality_config():
+    url = BASE_URL + '/'
+    data = {
+        'choice': '3',
+        'personalityName': 'Test Personality',
+        'personalityDescription': 'This is a test personality.'
+    }
+    response = requests.post(url, json=data)
+    assert response.status_code == 200
+    assert response.json()['success'] == True
+
+def test_delete_personality_config():
+    # Assuming you have a valid config_id to delete
+    config_id = 'config_id'
+    url = BASE_URL + '/'
+    data = {
+        'choice': '4',
+        'deleteConfig': config_id
+    }
+    response = requests.post(url, json=data)
+    assert response.status_code == 200
+    assert response.json()['success'] == True
+
+# Add more test cases for other functionalities
+
+
+
