@@ -3,14 +3,13 @@
 test_index_route (__main__.TestMain) ... ok
 test_create_personality(__main__.TestMain) ... ok
 test_delete_personality (__main__.TestMain) ... ok
-test_invalid_choice (__main__.TestMain) ... ok
-test_unexpected_choice (__main__.TestMain) ... ok
+
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.500s
+Ran 3 tests in 0.500s
 
 Test results:
-Successful: 5
+Successful: 3
 Failures: 0
 Errors: 0
 Total duration: 0.500 seconds
@@ -30,7 +29,7 @@ AssertionError: ValueError not raised
 ----------------------------------------------------------------------
 
 
-Ran 6 tests in 1.501s
+Ran 4 tests in 1.501s
 
 FAILED (failures=1)
 
