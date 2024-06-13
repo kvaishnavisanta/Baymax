@@ -1,0 +1,25 @@
+# Use an official Python runtime as a parent image
+FROM python:3.10
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . .
+
+RUN apt-get update && apt-get install -y \
+    portaudio19-dev \
+    libasound2-dev
+
+# Install any needed dependencies specified in requirements.txt
+RUN pip install -r reqq.txt
+
+# Expose port 5000 for Flask application
+EXPOSE 5000
+
+# Set environment variables
+ENV FLASK_APP=flasky.py
+ENV FLASK_RUN_HOST=0.0.0.0
+
+# Command to run the Flask application
+CMD ["flask", "run"]
