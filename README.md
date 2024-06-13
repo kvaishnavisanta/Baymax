@@ -47,17 +47,17 @@ This project presents a conversational chatbot with an intuitive graphical user 
 
 
 
-##Methodology:
+**Methodology**:
 
 This project employed a combination of software development practices and methodologies to build a robust and user-friendly conversational companion chatbot. The key steps involved:
 
-1. Requirement Gathering and Analysis:
+**1. Requirement Gathering and Analysis:**
 
 • Identified user needs and requirements for a personalized chatbot, focusing on assistance in various aspects of daily life.
 
 • Defined functionalities such as personalized interactions, comprehensive assistance, continuous learning, and an engaging user experience.
 
-2. Design and Architecture:
+**2. Design and Architecture:**
 
 • Flowchart Development: Created a detailed flowchart outlining the logic and workflow of the chatbot application, including user interaction, NLP processing, and response generation.
 
@@ -65,7 +65,7 @@ This project employed a combination of software development practices and method
 
 • Hume Voice API Integration: Integrated the Hume voice synthesis API to create distinct and personalized vocal identities, enabling the chatbot to interact with users through a unique and recognizable voice
 
-3. Implementation and Development:
+**3. Implementation and Development:**
 
 • Machine Learning (ML): Employed machine learning models, particularly the GPT (Generative Pre-trained Transformer) architecture, for generating natural and contextually appropriate responses, allowing the chatbot to continuously learn from user interactions. Using ELLM Emotion Larger Language model
 
@@ -73,20 +73,20 @@ This project employed a combination of software development practices and method
 
 • Testing and Debugging: Implemented a comprehensive test suite using the unit test framework to ensure the functionality and accuracy of the chatbot application. This involved creating unit tests, integration tests, and end-to-end tests to cover various aspects of the software.
 
-4. Deployment and Maintenance:
+**4. Deployment and Maintenance:**
 
 • Docker Containerization: Created a Docker image to package the chatbot application along with its dependencies, facilitating easy deployment and ensuring consistent performance across different environments.
 
 • Deployment to Docker Hub: Pushed the Docker image to Docker Hub, a public registry for Docker images, allowing for easy sharing and distribution of the chatbot.
 
-5. Evaluation and Refinement:
+**5. Evaluation and Refinement:**
 
 • Performance Monitoring: Monitored the chatbot's performance metrics, such as response time, accuracy, and user engagement, to identify areas for optimization and improvement.
 
 • Ongoing Research and Development: Stayed abreast of advancements in NLP, ML, and chatbot technologies to continuously enhance the chatbot's capabilities and user experience.
 
 
-##Operations:
+**Operations:**
 
 Docker is an open-source platform designed to automate the deployment, scaling, and management of applications using containerization. Containers encapsulate an application and all its dependencies, ensuring it runs reliably.
 
