@@ -124,6 +124,145 @@ Docker is an open-source platform designed to automate the deployment, scaling, 
     
 4.  *Microservices Architecture*: If your chatbot project involves multiple services (e.g., NLP processing, database, front-end), Docker can help you manage and orchestrate these services effectively. Each service can run in its own container, enabling independent scaling and deployment.
 
+**Testing**
+
+**Test cases**
+import os
+import pytest
+from flask import jsonify
+from flask_socketio import SocketIOTestClient
+from flask.testing import FlaskClient
+from app import app, socketio, display_configs, create_personality_config, delete_personality_config, hume_api_key
+
+@pytest.fixture
+def client():
+    app.config['TESTING'] = True
+    with app.test_client() as client:
+        yield client
+
+@pytest.fixture
+def socket_client():
+    with socketio.test_client(app) as client:
+        yield client
+
+def test_check_status(client):
+    response = client.get('/check_status')
+    assert response.status_code == 200
+    assert response.json == {'running': True}
+
+def test_stop_chat(client):
+    response = client.post('/stop_chat')
+    assert response.status_code == 200
+    assert response.json == {'success': True}
+
+def test_index_get(client):
+    response = client.get('/')
+    assert response.status_code == 200
+    assert b'Choose Personality Configuration' in response.data
+
+def test_create_personality_config():
+    name = "Test Personality"
+    prompt = "This is a test prompt."
+    config_id = create_personality_config(name, prompt)
+    assert isinstance(config_id, str)
+
+def test_delete_personality_config():
+    # Create a config first to ensure one exists
+    name = "Test Delete"
+    prompt = "This is a test delete prompt."
+    config_id = create_personality_config(name, prompt)
+    
+    # Delete the created config
+    delete_personality_config(config_id)
+    
+    # Ensure the config is deleted (assuming display_configs won't list it anymore)
+    configs = display_configs()
+    assert all(config[1] != config_id for config in configs)
+
+def test_handle_chat_message(socket_client):
+    test_message = 'Hello, Baymax!'
+    socket_client.emit('chat_message', test_message)
+    received = socket_client.get_received()
+    assert len(received) == 1
+    assert received[0]['name'] == 'chat_message'
+    assert received[0]['args'][0] == test_message
+
+def test_index_post_activate_chat(client, monkeypatch):
+    data = {'choice': '1'}
+    monkeypatch.setattr('builtins.input', lambda _: '6aa1a7ca-d3d0-4ea9-9e7d-97b064e7c109')
+    response = client.post('/', json=data)
+    assert response.status_code == 200
+    assert response.json == {'success': True}
+
+def test_index_post_display_configs(client):
+    data = {'choice': '2'}
+    response = client.post('/', json=data)
+    assert response.status_code == 200
+    assert response.json == {'success': True}
+
+def test_index_post_create_personality(client):
+    data = {
+        'choice': '3',
+        'personalityName': 'Test Personality',
+        'personalityDescription': 'This is a test description.'
+    }
+    response = client.post('/', json=data)
+    assert response.status_code == 200
+    assert response.json['success'] == True
+    assert 'config_id' in response.json
+
+def test_index_post_delete_personality(client):
+    # Create a config first to ensure one exists
+    name = "Test Delete"
+    prompt = "This is a test delete prompt."
+    config_id = create_personality_config(name, prompt)
+    
+    data = {
+        'choice': '4',
+        'deleteConfig': config_id
+    }
+    response = client.post('/', json=data)
+    assert response.status_code == 200
+    assert response.json['success'] == True
+
+
+**Testing results**
+=================================== test session starts ===================================
+platform linux -- Python 3.8.5, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+rootdir: /path/to/your/project
+collected 10 items
+
+test_app.py::test_check_status PASSED                                                    [ 10%]
+test_app.py::test_stop_chat FAILED                                                       [ 20%]
+test_app.py::test_index_get PASSED                                                       [ 30%]
+test_app.py::test_create_personality_config PASSED                                       [ 40%]
+test_app.py::test_delete_personality_config PASSED                                       [ 50%]
+test_app.py::test_handle_chat_message PASSED                                             [ 60%]
+test_app.py::test_index_post_activate_chat PASSED                                        [ 70%]
+test_app.py::test_index_post_display_configs PASSED                                      [ 80%]
+test_app.py::test_index_post_create_personality PASSED                                   [ 90%]
+test_app.py::test_index_post_delete_personality PASSED                                   [100%]
+
+=================================== FAILURES =============================================
+_________________________________ test_stop_chat _________________________________________
+
+client = <FlaskClient <Flask 'app'>>
+
+    def test_stop_chat(client):
+        response = client.post('/stop_chat')
+>       assert response.status_code == 200
+E       assert 500 == 200
+E        +  where 500 = <Response streamed [500 INTERNAL SERVER ERROR]>.status_code
+
+test_app.py:16: AssertionError
+================================= short test summary info ================================
+FAILED test_app.py::test_stop_chat - assert 500 == 200
+================================= 1 failed, 9 passed in 2.34s ============================
+![image](https://github.com/kvaishnavisanta/Baymax/assets/146420582/4de47a9e-10bb-428c-b283-6cb5e8cb8364)
+
+    
+
+
 
 
 ## Credits:
