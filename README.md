@@ -134,13 +134,13 @@ from flask_socketio import SocketIOTestClient
 from flask.testing import FlaskClient
 from app import app, socketio, display_configs, create_personality_config, delete_personality_config, hume_api_key
 
-@pytest.fixture
+
 def client():
     app.config['TESTING'] = True
     with app.test_client() as client:
         yield client
 
-@pytest.fixture
+
 def socket_client():
     with socketio.test_client(app) as client:
         yield client
@@ -224,6 +224,7 @@ def test_index_post_delete_personality(client):
     response = client.post('/', json=data)
     assert response.status_code == 200
     assert response.json['success'] == True
+
 
 
 **Testing results**
