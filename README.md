@@ -227,7 +227,11 @@ def test_index_post_delete_personality(client):
 
 
 **Testing results**
-![image](https://github.com/kvaishnavisanta/Baymax/assets/146420582/23666c3e-88a3-4173-9a65-d413c66a73c8)
+
+
+
+![image](https://github.com/kvaishnavisanta/Baymax/assets/146420582/2c99d249-e62c-467a-a462-6bec4c7acf0d)
+
 
 
 
