@@ -227,38 +227,9 @@ def test_index_post_delete_personality(client):
 
 
 **Testing results**
-=================================== test session starts ===================================
-platform linux -- Python 3.8.5, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
-rootdir: /path/to/your/project
-collected 10 items
+![image](https://github.com/kvaishnavisanta/Baymax/assets/146420582/23666c3e-88a3-4173-9a65-d413c66a73c8)
 
-test_app.py::test_check_status PASSED                                                    [ 10%]
-test_app.py::test_stop_chat FAILED                                                       [ 20%]
-test_app.py::test_index_get PASSED                                                       [ 30%]
-test_app.py::test_create_personality_config PASSED                                       [ 40%]
-test_app.py::test_delete_personality_config PASSED                                       [ 50%]
-test_app.py::test_handle_chat_message PASSED                                             [ 60%]
-test_app.py::test_index_post_activate_chat PASSED                                        [ 70%]
-test_app.py::test_index_post_display_configs PASSED                                      [ 80%]
-test_app.py::test_index_post_create_personality PASSED                                   [ 90%]
-test_app.py::test_index_post_delete_personality PASSED                                   [100%]
 
-=================================== FAILURES =============================================
-_________________________________ test_stop_chat _________________________________________
-
-client = <FlaskClient <Flask 'app'>>
-
-    def test_stop_chat(client):
-        response = client.post('/stop_chat')
->       assert response.status_code == 200
-E       assert 500 == 200
-E        +  where 500 = <Response streamed [500 INTERNAL SERVER ERROR]>.status_code
-
-test_app.py:16: AssertionError
-================================= short test summary info ================================
-FAILED test_app.py::test_stop_chat - assert 500 == 200
-================================= 1 failed, 9 passed in 2.34s ============================
-![image](https://github.com/kvaishnavisanta/Baymax/assets/146420582/4de47a9e-10bb-428c-b283-6cb5e8cb8364)
 
     
 
