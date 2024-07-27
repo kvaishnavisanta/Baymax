@@ -1,6 +1,6 @@
 # from hume import HumeVoiceClient, VoiceConfig
 #
-# client = HumeVoiceClient("k4tzTx8wFZOGgmCKEes1khlzcLK1270ohsbcjKnoptT6FPyp")
+# client = HumeVoiceClient("HUME_API_KEY_HERE")
 # config: VoiceConfig = client.create_config(
 #     name=f"//user given personality name ",
 #     prompt="{user prompt}",
