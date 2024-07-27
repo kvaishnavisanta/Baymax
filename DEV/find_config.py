@@ -1,6 +1,6 @@
 # from hume import HumeVoiceClient
 #
-# client = HumeVoiceClient("k4tzTx8wFZOGgmCKEes1khlzcLK1270ohsbcjKnoptT6FPyp")
+# client = HumeVoiceClient("HUME_API_KEY_HERE")
 #
 # for config in client.iter_configs():
 #     print(f"- {config.name} ({config.id})")
