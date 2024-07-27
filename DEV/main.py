@@ -5,7 +5,7 @@ from create_personality import create_personality_config
 
 
 async def main() -> None:
-    client = HumeVoiceClient("k4tzTx8wFZOGgmCKEes1khlzcLK1270ohsbcjKnoptT6FPyp")
+    client = HumeVoiceClient("HUME_API_KEY_HERE")
 
     # Your menu system goes here
     while True:
